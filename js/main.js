@@ -6,12 +6,7 @@ $(document).ready(function () {
         var n = document.createElement("div");
 
         function getRandomColor() {
-            var letters = '0123456789ABCDEF';
-            var color = '#';
-            for (var i = 0; i < 6; i++) {
-                color += letters[Math.floor(Math.random() * 16)];
-            }
-            return color;
+            return `hsla(${(360 * Math.random())},70%,70%,.8)`
         }
         n.style.backgroundColor = getRandomColor();
         document.getElementById("bod").appendChild(n);
@@ -21,9 +16,6 @@ $(document).ready(function () {
                 "height": e.clientY,
                 "width": e.clientX,
             });
-
-
-
         });
 
     });
